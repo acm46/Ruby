@@ -6,6 +6,7 @@ class Tree
     @node_name = name
   end
 
+
   def visit_all(&block)
     visit &block
     children.each {|c| c.visit_all &block}
@@ -16,6 +17,14 @@ class Tree
   end
 
 
-
-  
 end
+
+ruby_tree = Tree.new("Ruby", [Tree.new("Reia"),
+Tree.new("MacRuby")])
+
+puts "Visiting a node"
+ruby_tree.visit {|node| puts node.node_name}
+puts
+
+puts "visiting entire tree"
+ruby_tree.visit_all {|node| puts node.node_name}
