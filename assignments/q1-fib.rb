@@ -8,3 +8,7 @@ def fib(n, n1 = 1, n2 = 1)
 	end
 	return sum
 end
+
+puts fib(1) # => 1
+puts fib(6) # => 8
+puts fib(11, 0) # => 55
