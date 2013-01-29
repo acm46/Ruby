@@ -14,4 +14,8 @@ class Tree
   def visit(&block)
     block.call self
   end
+
+
+
+  
 end
